@@ -14,7 +14,6 @@
             </el-col>
           </el-row>
         </el-main>
-        <el-footer>vue-demo</el-footer>
       </el-container>
     </el-container>
   </div>
@@ -40,13 +39,6 @@ body,
   padding: 0px;
   margin: 0px;
   height: 100%;
-}
-
-.el-footer {
-  background-color: #b3c0d1;
-  color: #333;
-  text-align: center;
-  line-height: 60px;
 }
 
 .el-main {

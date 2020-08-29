@@ -24,13 +24,21 @@ export default {
     return {
       form: {
         name: ""
-      }
+      },
+     
     };
   },
   methods: {
     onSubmit(form) {
       console.log(form.name);
-    }
+    },
+     getData:function(){
+         let _this=this;
+        //  axios
+     }
+  },
+  mounted:function(){
+      this.getData;
   }
 };
 </script>

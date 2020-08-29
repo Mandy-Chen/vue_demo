@@ -59,7 +59,7 @@ export default {
 
 <style>
 .index_nav {
-  height: 700px;
+  height: 760px;
   background-color: #545c64;
 }
 </style>
