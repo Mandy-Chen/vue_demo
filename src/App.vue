@@ -9,10 +9,12 @@
             <el-col :span="4">
               <indexNav></indexNav>
             </el-col>
-            <el-col :span="20"><indexMain></indexMain></el-col>
+            <el-col :span="20">
+              <indexMain></indexMain>
+            </el-col>
           </el-row>
         </el-main>
-        <el-footer>Footer</el-footer>
+        <el-footer>vue-demo</el-footer>
       </el-container>
     </el-container>
   </div>
@@ -31,9 +33,6 @@ export default {
 </script>
 
 <style>
-/* @import url("//unpkg.com/element-ui@2.13.2/lib/theme-chalk/index.css"); */
-/* @import url("element-ui/lib/theme-chalk/index.css"); */
-/* @import "element-ui/lib/theme-chalk/index.css"; */
 html,
 body,
 #app,
@@ -54,7 +53,6 @@ body,
   background-color: #e9eef3;
   color: #333;
   text-align: center;
-  line-height: 160px;
   padding: 0px;
 }
 .el-header {
@@ -63,6 +61,4 @@ body,
   text-align: left;
   line-height: 60px;
 }
-
-
 </style>
