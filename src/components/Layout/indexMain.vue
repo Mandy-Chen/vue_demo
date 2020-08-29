@@ -18,27 +18,35 @@
 </template>
 
 <script>
+import { addEmployee } from "../../api";
 export default {
   name: "indexMain",
   data() {
     return {
       form: {
         name: ""
-      },
-     
+      }
     };
   },
   methods: {
     onSubmit(form) {
       console.log(form.name);
+      let employee = {
+        id: -1,
+        name: form.name
+      };
+      console.log(employee);
+      console.log(this.$qs.stringify(employee));
+      addEmployee(form.name).then(response => {});
+      
     },
-     getData:function(){
-         let _this=this;
-        //  axios
-     }
+    getData: function() {
+      let _this = this;
+      //  axios
+    }
   },
-  mounted:function(){
-      this.getData;
+  mounted: function() {
+    this.getData;
   }
 };
 </script>
@@ -49,5 +57,4 @@ export default {
   background-color: #bacada;
   padding: 30px;
 }
-
 </style>

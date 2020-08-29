@@ -5,8 +5,8 @@ const base = axios.create({
   export const getEmployee = () => {
     return base.get('/employee');
   };
-  export const addEmployee = (employee) => {
-    return base.post('/employee',{employee:employee});
+  export const addEmployee = (name) => {
+    return base.post('/employee',{name:name});
   };
   export const updateEmployee = (id,employee) => {
     return base.put(`/employee/${id}`,{employee:employee});
