@@ -15,7 +15,7 @@
       </el-form-item>
     </el-form>
     <ul>
-      <li v-for="item in items" :key="item.message">
+      <li v-for="item in items" :key="item.id">
         {{ item.id }}  {{ item.name }}
       </li>
     </ul>

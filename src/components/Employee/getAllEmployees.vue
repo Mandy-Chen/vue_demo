@@ -1,39 +1,31 @@
 <template>
-  <indexNav></indexNav>
+  <ul>
+    <li v-for="item in items" :key="item.id">{{ item.id }} {{ item.name }}</li>
+  </ul>
 </template>
 
 <script>
-import indexNav from "../Layout/indexNav";
-import indexMain from "../Layout/indexMain";
+import { getAllEmployee } from "../../api";
 export default {
   name: "GetAllEmployees",
-  components: {
-    indexNav,
-    indexMain
+  data() {
+    return {
+      items: []
+    };
+  },
+  methods: {
+    getData: function() {
+      getAllEmployee().then(response => {
+        this.items = response.data;
+      });
+    }
+  },
+  mounted: function() {
+    this.getData();
   }
 };
 </script>
 
 <style>
-html,
-body,
-#app,
-.el-container {
-  padding: 0px;
-  margin: 0px;
-  height: 100%;
-}
 
-.el-main {
-  background-color: #e9eef3;
-  color: #333;
-  text-align: center;
-  padding: 0px;
-}
-.el-header {
-  background-color: #b3c0d1;
-  color: #333;
-  text-align: left;
-  line-height: 60px;
-}
 </style>
