@@ -1,6 +1,6 @@
 <template>
-  <!-- <router-view /> -->
   <div id="app">
+  
     <el-container>
       <el-header>Rbac系统</el-header>
       <el-container>
@@ -8,9 +8,11 @@
           <el-row>
             <el-col :span="4">
               <indexNav></indexNav>
+               
             </el-col>
             <el-col :span="20">
-              <indexMain></indexMain>
+              <!-- <indexMain></indexMain> -->
+              <router-view />
             </el-col>
           </el-row>
         </el-main>
@@ -20,17 +22,16 @@
 </template>
 
 <script>
-import indexNav from "./components/Layout/indexNav";
-import indexMain from "./components/Layout/indexMain";
+import IndexNav from "./components/Layout/indexNav";
+import IndexMain from "./components/Layout/indexMain";
 export default {
   name: "App",
   components: {
-    indexNav,
-    indexMain
+    IndexNav,
+    IndexMain
   }
 };
 </script>
-
 <style>
 html,
 body,

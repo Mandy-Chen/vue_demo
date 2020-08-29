@@ -25,7 +25,7 @@
 <script>
 import { addEmployee,getAllEmployee } from "../../api";
 export default {
-  name: "indexMain",
+  name: "IndexMain",
   data() {
     return {
       form: {
