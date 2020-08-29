@@ -11,7 +11,7 @@
         <el-input v-model="form.name"></el-input>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="onSubmit">Add</el-button>
+        <el-button type="primary" @click="onSubmit(form)">Add</el-button>
       </el-form-item>
     </el-form>
   </div>
@@ -28,8 +28,8 @@ export default {
     };
   },
   methods: {
-    onSubmit() {
-      console.log("submit!");
+    onSubmit(form) {
+      console.log(form.name);
     }
   }
 };
