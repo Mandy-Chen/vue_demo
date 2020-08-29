@@ -2,7 +2,7 @@ import axios from "axios";
 const base = axios.create({
     baseURL: "http://localhost:8088",
   });
-  export const getEmployee = () => {
+  export const getAllEmployee = () => {
     return base.get('/employee');
   };
   export const addEmployee = (name) => {

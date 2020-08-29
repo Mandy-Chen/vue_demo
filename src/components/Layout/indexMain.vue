@@ -14,39 +14,42 @@
         <el-button type="primary" @click="onSubmit(form)">Add</el-button>
       </el-form-item>
     </el-form>
+    <ul>
+      <li v-for="item in items" :key="item.message">
+        {{ item.id }}  {{ item.name }}
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
-import { addEmployee } from "../../api";
+import { addEmployee,getAllEmployee } from "../../api";
 export default {
   name: "indexMain",
   data() {
     return {
       form: {
-        name: ""
-      }
+        name: "",
+      },
+      items: [],
     };
   },
   methods: {
     onSubmit(form) {
-      console.log(form.name);
       let employee = {
         id: -1,
         name: form.name
       };
-      console.log(employee);
-      console.log(this.$qs.stringify(employee));
       addEmployee(form.name).then(response => {});
-      
     },
     getData: function() {
-      let _this = this;
-      //  axios
+      getAllEmployee().then((response)=>{
+          this.items=response.data;
+      })
     }
   },
   mounted: function() {
-    this.getData;
+    this.getData();
   }
 };
 </script>
