@@ -12,9 +12,8 @@
         title="这是一段内容确定删除吗？"
         @onConfirm="deleteEmployee(item.id)"
       >
-        <el-button slot="reference">删除</el-button>
+        <el-button slot="reference" type="danger" icon="el-icon-delete" circle></el-button>
       </el-popconfirm>
-      <el-button type="danger" icon="el-icon-delete" circle></el-button>
       <el-divider></el-divider>
     </div>
   </el-card>
@@ -40,9 +39,11 @@ export default {
         });
     },
     deleteEmployee: function(id) {
-      console.log("shanchu" + id);
       deleteEmployee(id)
-        .then( response => {})
+        .then( response => {
+            this.$message.success("删除成功！");
+            this.getData();
+        })
         .catch(() => {
           this.$message.error("删除失败！");
         });
