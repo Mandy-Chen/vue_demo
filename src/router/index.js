@@ -1,8 +1,8 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import GetAllEmployees from '../components/Employee/GetAllEmployees'
-import DeleteEmployee from '../components/Employee/DeleteEmployee'
+import Vue from 'vue';
+import Router from 'vue-router';
+import GetAllEmployees from '../components/Employee/GetAllEmployees';
+import DeleteEmployee from '../components/Employee/DeleteEmployee';
+import UpdateEmployee from '../components/Employee/UpdateEmployee';
 import IndexMain from '../components/Layout/IndexMain';
 Vue.use(Router)
 
@@ -20,9 +20,15 @@ export default new Router({
       component: GetAllEmployees
     },
     {
-      path: '/DeleteEmployee',
-      name: 'DeleteEmployee',
+      path: '/deleteEmployee',
+      name: 'deleteEmployee',
       component: DeleteEmployee
-    }
+    },
+    {
+      path: '/updateEmployee',
+      name: 'updateEmployee',
+      component: UpdateEmployee
+    },
+    
   ]
 })

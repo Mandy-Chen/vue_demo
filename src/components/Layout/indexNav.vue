@@ -34,7 +34,11 @@
       </el-menu-item>
        <el-menu-item index="deleteEmployee">
         <i class="el-icon-menu"></i>
-        <span slot="title">删除员工</span>
+        <span slot="title">删除员工信息</span>
+      </el-menu-item>
+      <el-menu-item index="updateEmployee">
+        <i class="el-icon-menu"></i>
+        <span slot="title">更新员工信息</span>
       </el-menu-item>
       <el-menu-item index="deleteEmployee" disabled>
         <i class="el-icon-document"></i>
