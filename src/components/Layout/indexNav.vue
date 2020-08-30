@@ -7,7 +7,7 @@
       background-color="#545c64"
       text-color="#fff"
       active-text-color="#ffd04b"
-      :default-active="this.$route.path"
+      :default-active="$route.path"
        router
     >
       <el-submenu index="1" >
@@ -32,9 +32,13 @@
         <i class="el-icon-menu"></i>
         <span slot="title">查看全部员工</span>
       </el-menu-item>
-      <el-menu-item index="3" disabled>
+       <el-menu-item index="deleteEmployee">
+        <i class="el-icon-menu"></i>
+        <span slot="title">删除员工</span>
+      </el-menu-item>
+      <el-menu-item index="deleteEmployee" disabled>
         <i class="el-icon-document"></i>
-        <span slot="title">导航三</span>
+        <span slot="title">大多数</span>
       </el-menu-item>
       <el-menu-item index="4">
         <i class="el-icon-setting"></i>
@@ -59,7 +63,7 @@ export default {
 
 <style>
 .index_nav {
-  height: 760px;
+  min-height: 760px;
   background-color: #545c64;
 }
 </style>
