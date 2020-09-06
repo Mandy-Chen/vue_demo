@@ -20,4 +20,7 @@ const base = axios.create({
   export const addDepartment=(name)=>{
     return base.post('/department',{name:name});
   }
+  export const updateDepartment=(id,name)=>{
+    return base.put(`/department/${id}`,{name:name});
+  }
  

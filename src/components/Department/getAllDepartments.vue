@@ -17,7 +17,6 @@
       </el-table-column>
     </el-table>
     </li>
-    
   </ul>
 </template>
 
