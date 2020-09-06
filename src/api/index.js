@@ -17,4 +17,7 @@ const base = axios.create({
   export const getAllDepartments=()=>{
     return base.get('/department');
   }
+  export const addDepartment=(name)=>{
+    return base.post('/department',{name:name});
+  }
  

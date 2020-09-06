@@ -1,7 +1,7 @@
 <template>
   <el-card class="box-card">
     <div slot="header" class="clearfix">
-      <span>添加员工</span>
+      <span>添加部门</span>
     </div>
     <el-form
       :inline="true"
@@ -13,17 +13,6 @@
       <el-form-item label="name">
         <el-input v-model="form.name"></el-input>
       </el-form-item>
-      <el-form-item label="department">
-        <el-select v-model="form.departmentId" placeholder="请选择">
-          <el-option
-            v-for="item in items"
-            :key="item.id"
-            :label="item.name"
-            :value="item.id"
-          >
-          </el-option>
-        </el-select>
-      </el-form-item>
       <el-form-item>
         <el-button type="primary" @click="onSubmit(form)">Add</el-button>
       </el-form-item>
@@ -32,43 +21,29 @@
 </template>
 
 <script>
-import { addEmployee,getAllDepartments } from "../../api";
+import { addDepartment} from "../../api";
 export default {
-  name: "AddEmployee",
+  name: "AddDepartment",
   data() {
     return {
       form: {
         name: "",
-        departmentId: ""
       },
-      items: []
     };
   },
   methods: {
     onSubmit(form) {
-      let employee = {
+      let department = {
         id: -1,
         name: form.name,
-        departmentId:form.departmentId,
       };
-      addEmployee(form.name,form.departmentId).then(response => {
+      console.log(department);
+      addDepartment(form.name).then(response => {
         this.$message.success("添加成功！");
-         this.form.name="";
+        this.form.name="";
       });
     },
-    getDate() {
-      getAllDepartments()
-        .then(response => {
-          this.items = response.data;
-        })
-        .catch(() => {
-          this.$message.error("获取部门信息失败！");
-        });
-    }
   },
-  mounted: function() {
-    this.getDate();
-  }
 };
 </script>
 
