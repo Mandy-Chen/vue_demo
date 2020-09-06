@@ -4,6 +4,7 @@ import GetAllEmployees from '../components/Employee/GetAllEmployees';
 import DeleteEmployee from '../components/Employee/DeleteEmployee';
 import UpdateEmployee from '../components/Employee/UpdateEmployee';
 import IndexMain from '../components/Layout/IndexMain';
+import AddEmployee from '../components/Employee/AddEmployee'
 Vue.use(Router)
 
 export default new Router({
@@ -11,8 +12,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
+      name: 'index',
       component: IndexMain,
+    },
+    {
+      path: '/addEmployee',
+      name: 'addEmployee',
+      component: AddEmployee
     },
     {
       path: '/getAllEmployees',

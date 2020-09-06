@@ -36,8 +36,8 @@ export default {
         cancelButtonText: "取消"
       })
         .then(({ value }) => {
-          updateEmployee(id,value)
-            .then((response) => {
+          updateEmployee(id, value)
+            .then(response => {
               this.$message.success("修改成功！");
               this.getData();
             })
@@ -51,7 +51,7 @@ export default {
             message: "取消修改"
           });
         });
-    },
+    }
   },
   mounted: function() {
     this.getData();

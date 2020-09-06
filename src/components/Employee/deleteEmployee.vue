@@ -9,7 +9,7 @@
     <div v-for="item in items" :key="item.id" class="text item">
       {{ item.id }} {{ item.name }}
       <el-popconfirm
-        title="这是一段内容确定删除吗？"
+        title="确定要删除该员工吗？"
         @onConfirm="deleteEmployee(item.id)"
       >
         <el-button slot="reference" type="danger" icon="el-icon-delete" circle></el-button>
