@@ -23,4 +23,8 @@ const base = axios.create({
   export const updateDepartment=(id,name)=>{
     return base.put(`/department/${id}`,{name:name});
   }
+  export const deleteDepartment = (id) => {
+    return base.delete(`/department/${id}`);
+  };
+  
  

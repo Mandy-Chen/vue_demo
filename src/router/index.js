@@ -8,6 +8,7 @@ import AddEmployee from '../components/Employee/AddEmployee';
 import AddDepartment from '../components/Department/AddDepartment';
 import GetAllDepartments from '../components/Department/GetAllDepartments';
 import UpdateDepartment from '../components/Department/UpdateDepartment';
+import DeleteDepartment from "../components/Department/DeleteDepartment";
 Vue.use(Router)
 
 export default new Router({
@@ -52,6 +53,11 @@ export default new Router({
       path:'/updateDepartment',
       name:'updateDepartment',
       component:UpdateDepartment
+    },
+    {
+      path:'/deleteDepartment',
+      name:'deleteDepartment',
+      component:DeleteDepartment
     },
   ]
 })

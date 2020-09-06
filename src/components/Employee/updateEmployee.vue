@@ -4,7 +4,7 @@
       <span>修改员工信息</span>
     </div>
     <div v-for="item in items" :key="item.id" class="text item">
-      {{ item.id }} {{ item.name }}
+      {{ item.id }} -- {{ item.name }} -- {{ item.departmentId }}
       <el-button type="text" @click="update(item.id)">修改</el-button>
       <el-divider></el-divider>
     </div>
